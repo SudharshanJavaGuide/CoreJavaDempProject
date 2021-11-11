@@ -11,7 +11,7 @@ public class Student {
 	
 	
 	public Student(int studentId, String studentName, String studentAddress) {
-		super();
+		//super();
 		this.studentId = studentId;
 		this.studentName = studentName;
 		this.studentAddress = studentAddress;
@@ -20,6 +20,7 @@ public class Student {
 
 
 	public static List<Student>  displayStudentList(){
+		System.out.println("**Display Student List()***");
 		List<Student> listOfStudent=new ArrayList<Student>();
 		Student s1=new Student(101,"Sudha","Kadapa");
 		Student s2=new Student(102,"Indra","Chittoor");
