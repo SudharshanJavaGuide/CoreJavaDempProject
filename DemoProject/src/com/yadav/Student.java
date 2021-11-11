@@ -16,6 +16,9 @@ public class Student {
 		this.studentName = studentName;
 		this.studentAddress = studentAddress;
 	}
+	public static String welcomeMessage(String name) {
+		return "Welcome To Incedo Family Mr."+name;
+	}
 
 
 
@@ -47,5 +50,6 @@ public class Student {
 		System.out.println("****Student List****");
 		//System.out.println(displayStudentList);
 		displayStudentList.forEach(s->System.out.println(s));
+		welcomeMessage("Nandyala Sudharshan Yadav");
 	}
 }
