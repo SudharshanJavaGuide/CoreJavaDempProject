@@ -3,24 +3,40 @@ package com.yadav;
 import java.util.*;
 
 public class Student {
-	public static String place="Hyd";
-	public int studentId=101;
-	public String studentName="Sudharshan";
-	public String studentAddress="kadapa";
-	/*
-    public Student(int studentId,String studentName,String studentAddress) {
-    	this.studentId=studentId;
-    	this.studentName=studentName;
-    	this.studentAddress=studentAddress;
-    }
-    */
-    {
-    	studentId=110;
-    	studentName="Harsha";
-    	studentAddress="Chennai";
-    }
-    
+	
+	public int studentId;
+	public String studentName;
+	public String studentAddress;
+	
+	
+	
+	public Student(int studentId, String studentName, String studentAddress) {
+		//super();
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.studentAddress = studentAddress;
+	}
+	public static String welcomeMessage(String name) {
+		return "Welcome To Incedo Family Mr."+name;
+	}
 
+
+
+	public static List<Student>  displayStudentList(){
+		System.out.println("**Display Student List()***");
+		List<Student> listOfStudent=new ArrayList<Student>();
+		Student s1=new Student(101,"Sudha","Kadapa");
+		Student s2=new Student(102,"Indra","Chittoor");
+		Student s3=new Student(103,"Naveen","Hyderabad");
+		Student s4=new Student(104,"Narendra","Bangalore");
+		Student s5=new Student(105,"Pradeep","Chennai");
+		listOfStudent.add(s1);
+		listOfStudent.add(s2);
+		listOfStudent.add(s3);
+		listOfStudent.add(s4);
+		listOfStudent.add(s5);
+		return listOfStudent;
+	}
 	@Override
 	public String toString() {
 		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentAddress=" + studentAddress
@@ -28,33 +44,12 @@ public class Student {
 	}
 
 
+
 	public static void main(String[] args) {
-		//Student s= new Student(105,"Sudha","Chittoor");
-		//System.out.println(s);
-		//System.out.println(s.studentId+"-"+s.studentName);
-		//System.out.println("Student ID:"+s.studentId);
-		//System.out.println(studentId);
-		Student s=new Student();
-		System.out.println(place);
-		System.out.println("Place Of Student :"+Student.place);
-		System.out.println(s.studentId+" "+s.studentName+" "+s.studentAddress);
-		/*
-		Scanner s=new Scanner(System.in);
-		System.out.println("please enter student id");
-		int sid=s.nextInt();
-		System.out.println("please enter student number");
-		int number=s.nextInt();
-		System.out.println("please enter student name");
-		String name=s.next();
-		System.out.println("please enter student mothername");
-		String fname=s.next();
-		System.out.println("please enter student fathername");
-		String mname=s.nextLine();
-		System.out.println("studentname:"+name);
-		System.out.println("studentid:"+sid);
-		System.out.println("studentnumber:"+number);
-		System.out.println("student mothername:"+mname);
-		System.out.println("student fathername:"+fname);
-		*/
+		List<Student> displayStudentList = displayStudentList();
+		System.out.println("****Student List****");
+		//System.out.println(displayStudentList);
+		displayStudentList.forEach(s->System.out.println(s));
+		welcomeMessage("Nandyala Sudharshan Yadav");
 	}
 }
