@@ -19,6 +19,9 @@ public class Student {
 	public static String welcomeMessage(String name) {
 		return "Welcome To Incedo Family Mr."+name;
 	}
+	public static String greetMessage(String user) {
+		return "Good After Noon Mr."+user;
+	}
 
 
 
